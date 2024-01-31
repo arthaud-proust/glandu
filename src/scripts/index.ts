@@ -18,7 +18,7 @@ const checkGlanduRank = () => {
     const glanduRank = getGlanduRankForName(name);
 
     nameInput.value = "";
-    outputSpan.innerText = `${name} est un ${glanduRank.title}`;
+    outputSpan.innerText = glanduRank.describe(name);
 };
 
 checkButton.addEventListener("click", checkGlanduRank);

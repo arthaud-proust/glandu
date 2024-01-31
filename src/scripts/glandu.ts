@@ -1,29 +1,29 @@
 type GlanduRankId = string;
 type GlanduRank = {
     id: GlanduRankId;
-    title: string;
+    describe: (name: string) => string;
 };
 
 const glanduRanks: Array<GlanduRank> = [
     {
         id: "0",
-        title: "Faux Glandu",
+        describe: (name: string) => `${name} n'est pas un glandu`,
     },
     {
         id: "1",
-        title: "Glandu basique",
+        describe: (name: string) => `${name} est un(e) glandu de niveau 1`,
     },
     {
         id: "2",
-        title: "Glandu vicieux",
+        describe: (name: string) => `${name} est un(e) glandu de niveau 2`,
     },
     {
         id: "3",
-        title: "Glandu basse-performance",
+        describe: (name: string) => `${name} est un(e) glandu de niveau 3`,
     },
     {
         id: "4",
-        title: "Glandu invertébré",
+        describe: (name: string) => `${name} est un(e) glandu de niveau 4`,
     },
 ];
 
