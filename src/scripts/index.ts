@@ -6,8 +6,15 @@ const checkButton = document.getElementById(
 ) as HTMLButtonElement;
 const outputSpan = document.getElementById("output-span") as HTMLSpanElement;
 
+const isBlank = (str: string) => !str || /^\s*$/.test(str);
+
 const checkGlanduRank = () => {
     const name = nameInput.value;
+
+    if (isBlank(name)) {
+        return;
+    }
+
     const glanduRank = getGlanduRankForName(name);
 
     nameInput.value = "";
