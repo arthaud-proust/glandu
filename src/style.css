@@ -11,7 +11,14 @@ html {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
+}
 
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
     padding: 0;
     margin: 0;
 }
@@ -21,18 +28,30 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
+
     height: 100vh;
     width: 100%;
+
+    padding: 1rem 0.5rem;
 }
 
 #app > main {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 24rem;
 }
 
 #app > main > label {
     display: flex;
     flex-direction: column;
+}
+
+#app > main > span {
+    padding-top: 1rem;
+    font-weight: bold;
+    /* text-align: center; */
 }
 
 input,
@@ -51,4 +70,8 @@ button:hover {
 }
 button:active {
     background: rgb(65, 65, 65);
+}
+
+#app > footer {
+    font-size: 0.8rem;
 }
